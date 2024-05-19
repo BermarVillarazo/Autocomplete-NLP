@@ -3,7 +3,7 @@ import os
 import json
 import numpy as np
 import pandas as pd
-from pandas.io.json import json_normalize
+from pandas import json_normalize
 import re
 
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
@@ -106,7 +106,7 @@ class Autocompleter:
     
     def calc_matrice(self, df):
         # define tfidf parameter in order to count/vectorize the description vector and then normalize it.
-        model_tf = TfidfVectorizer(analyzer='word',ngram_range=(1, 5), min_df=0)
+        model_tf = TfidfVectorizer(analyzer='word',ngram_range=(1, 5), min_df=0.01)
         tfidf_matrice = model_tf.fit_transform(df['Text'])
         print("tfidf_matrice ", tfidf_matrice.shape)
         return model_tf, tfidf_matrice

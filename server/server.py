@@ -13,7 +13,6 @@ def autocomplete():
     return jsonify({"Completions": completions})
 
 if __name__ == "__main__":
-    
     my_autocompleter = autocompleter.Autocompleter()
     data_orig = my_autocompleter.import_json("sample_conversations.json")
     data_clean = my_autocompleter.process_data(data_orig)
