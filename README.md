@@ -40,3 +40,45 @@ if you were to type without uppercase: `when was`
 -   b. online: count the number of time the representative actually select a proposals and count the number of time the representative decides to ignore them.
 
 4.  improve the system by first matching the customer sentenses to a topic id context in order to better predict the representative answers
+
+# Autocomplete-NLP
+
+## Nextjs(frontend)
+
+**_Install dependencies_**
+
+### npm i -D daisyui@latest
+
+**_make sure you update your tailwind.config.mjs_**
+
+```bash
+module.exports = {
+    //...
+    plugins: [
+        require('daisyui'),
+    ],
+}
+```
+
+## Python
+
+**_Install dependencies_**
+
+```bash
+pip install flask-cors
+```
+
+### Run the client
+
+```bash
+npm run dev
+```
+**_http://localhost:3000/_**
+
+
+### Run the python server
+
+```bash
+py server.py
+```
+**_http://localhost:8080/autocomplete?q="word"_**
