@@ -10,7 +10,7 @@ export default function Form() {
     useEffect(() => {
         async function fetchData() {
             const response = await fetch(
-                `http://localhost:8080/autocomplete?q=${encodeURIComponent(input)}`
+                `https://copilot.nize.foo/autocomplete?q=${encodeURIComponent(input)}`
             );
             const data = await response.json();
             setSuggestions(data.Completions);
