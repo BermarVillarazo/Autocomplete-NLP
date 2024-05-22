@@ -6,7 +6,7 @@
             "CompanyGroupId": 1,
             "Messages": [
                 {
-                    "IsFromCustomer": true,
+                    "IsFromCustomer": true, 
                     "Text": "Hi! I placed an order on your website and I can't find the tracking number. Can you help me find out where my package is?"
                 },
                 { "IsFromCustomer": true, "Text": "I think I used my email address to log in." }
